@@ -4,7 +4,7 @@ declare(strict_types=1);
 // 1. GUARDIA DE SEGURIDAD (bloque anónimo auto-ejecutado)
 (function (): void {
     $requestPath = rtrim(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH), '/');
-    $publicBase  = rtrim(dirname($_SERVER['SCRIPT_NAME'] ?? '/index.php'), '/');
+    $publicBase  = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '/index.php')), '/');
     if ($requestPath !== $publicBase && !str_starts_with($requestPath, $publicBase . '/')) {
         if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
         $dest = isset($_SESSION['auth']['id']) ? 'home' : 'auth.login';
