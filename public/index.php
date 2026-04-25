@@ -1,21 +1,25 @@
 <?php
 declare(strict_types=1);
 
-// 1. GUARDIA DE SEGURIDAD (bloque anónimo auto-ejecutado)
-(function (): void {
-    $requestPath = rtrim(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH), '/');
-    $publicBase  = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '/index.php')), '/');
-    if ($requestPath !== $publicBase && !str_starts_with($requestPath, $publicBase . '/')) {
-        if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
-        $dest = isset($_SESSION['auth']['id']) ? 'home' : 'auth.login';
-        header('Location: ' . $publicBase . '/index.php?route=' . $dest);
-        exit;
-    }
-})();
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
+
+// 1. GUARDIA DE SEGURIDAD (solo sanea entrada, sin redirecciones automáticas)
+if (isset($_GET['route']) && is_array($_GET['route'])) {
+    $_GET['route'] = 'home';
+}
+if (isset($_GET['id']) && is_array($_GET['id'])) {
+    $_GET['id'] = '';
+}
 
 // 2. BOOTSTRAP
 require_once __DIR__ . '/../Common/ClassLoader.php';
 require_once __DIR__ . '/../Common/DependencyInjection.php';
+require_once __DIR__ . '/../Infrastructure/Entrypoints/Web/Controllers/Config/WebRoutes.php';
 require_once __DIR__ . '/../Infrastructure/Entrypoints/Web/Presentation/View.php';
 require_once __DIR__ . '/../Infrastructure/Entrypoints/Web/Presentation/Flash.php';
 DependencyInjection::boot();
@@ -32,6 +36,7 @@ function requireAuth(): void {
 
 // 4. ROUTING
 $route      = isset($_GET['route']) ? trim((string) $_GET['route']) : 'home';
+$route      = $route === '' ? 'home' : $route;
 $routes     = WebRoutes::routes();
 $httpMethod = strtoupper((string) $_SERVER['REQUEST_METHOD']);
 
