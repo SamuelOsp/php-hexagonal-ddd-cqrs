@@ -1,3 +1,7 @@
-</div> <!-- end main-container -->
+<?php
+declare(strict_types=1);
+?>
+        </main>
+    </div>
 </body>
 </html>
