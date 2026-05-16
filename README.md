@@ -9,18 +9,18 @@ EUMS es una plataforma avanzada de gestión de identidades diseñada bajo los pr
 ## 📸 Visual Showcase
 
 ### 🖥️ Dashboard Principal
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/Home.png)
 
 ### 🔐 Acceso de Seguridad
 <p align="center">
-  <img src="screenshots/login.png" width="45%" />
-  <img src="screenshots/users.png" width="45%" />
+  <img src="screenshots/Login%20PHP.png" width="45%" />
+  <img src="screenshots/Gestion%20de%20usuarios.png" width="45%" />
 </p>
 
 ### 🎥 Demostración en Vivo
-Si no puedes ver el video, [haz clic aquí para descargarlo](screenshots/demo.mp4).
+Si no puedes ver el video, [haz clic aquí para verlo directamente](screenshots/2026-05-15%2021-38-24.mkv).
 
-https://github.com/SamuelOsp/php-hexagonal-ddd-cqrs/assets/demo.mp4
+https://github.com/SamuelOsp/php-hexagonal-ddd-cqrs/raw/main/screenshots/2026-05-15%2021-38-24.mkv
 
 ## 🛠️ Stack Tecnológico
 
