@@ -17,9 +17,41 @@ EUMS es una plataforma avanzada de gestión de identidades diseñada bajo los pr
   <img src="screenshots/Gestion%20de%20usuarios.png" width="45%" />
 </p>
 
-### 🎥 Demostración en Vivo
-[![Ver Demo en Video](screenshots/Home.png)](https://github.com/SamuelOsp/php-hexagonal-ddd-cqrs/blob/main/screenshots/2026-05-15%2021-38-24.mkv)
-*Haz clic en la imagen de arriba para ver el video de demostración.*
+### 🎥 Demostración en Video
+[![Ver Demo en YouTube](https://img.shields.io/badge/YouTube-Video%20Demo-red?style=for-the-badge&logo=youtube)](https://youtu.be/UGU6ZAgrlLg)
+
+*Haz clic en el botón de arriba para ver la demostración completa en YouTube.*
+
+## 📸 Galería del Sistema
+
+### 🏠 Inicio y Bienvenida
+<p align="center">
+  <img src="screenshots/Home.png" width="48%" />
+  <img src="screenshots/Bienvenida.png" width="48%" />
+</p>
+
+### 🔐 Autenticación y Registro
+<p align="center">
+  <img src="screenshots/Login%20PHP.png" width="32%" />
+  <img src="screenshots/Register1.png" width="32%" />
+  <img src="screenshots/Register2.png" width="32%" />
+</p>
+<p align="center">
+  <img src="screenshots/Nuevo%20registro%201.png" width="48%" />
+  <img src="screenshots/Nuevo%20registro%202.png" width="48%" />
+</p>
+
+### 👥 Administración de Usuarios
+<p align="center">
+  <img src="screenshots/Gestion%20de%20usuarios.png" width="100%" />
+</p>
+<p align="center">
+  <img src="screenshots/Detalle%20de%20identidad.png" width="48%" />
+  <img src="screenshots/Editar%20usuario%201.png" width="48%" />
+</p>
+<p align="center">
+  <img src="screenshots/Editar%20usuario2.png" width="100%" />
+</p>
 
 ## 🛠️ Stack Tecnológico
 
